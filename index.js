@@ -6,7 +6,7 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 
-require("opusscript");
+
 search = require('youtube-search');
 
 con = console.log,
