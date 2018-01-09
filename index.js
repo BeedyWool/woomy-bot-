@@ -13,7 +13,7 @@ con = console.log,
 
 bot.on("ready", function () {
   bot.user.setGame(`ne pas avoir l'angine de PS liquidateur de kids|!commande`) 
-var commande = [`ne pas avoir l'angine de PS liquidateur de kids|!commande`,`Woooooomy|!commande`,`Splatoon sur wii U`,`faire une encyclopédie splatoon|!commande`];
+var commande = [`ne pas avoir l'angine de PS liquidateur de kids|!commande`,`Woooooomy|!commande`,`Splatoon sur wii U`,`faire une encyclopÃ©die splatoon|!commande`];
 
 bot.user.setAvatar("./avata.jpg")
 
@@ -29,7 +29,7 @@ servercount = client.guilds.size;
 
 
 
-    console.log("Je suis connecté");});
+    console.log("Je suis connectÃ©");});
 
     bot.on('guildMemberAdd', member => {
       member.createDM().then(channel => {
@@ -43,19 +43,19 @@ let points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
 bot.on("message", message => {
 if(!message.content.startsWith(prefix)) return;
 if(message.author.bot) return;
-if(!points[message.author.id]) points[message.author.id] = {expérience: 0, level: 0};
+if(!points[message.author.id]) points[message.author.id] = {experience: 0, level: 0};
 let userData = points[message.author.id];
 userData.points++;
 let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
 if(curLevel > userData.level) {
 // Level up!
 userData.level = curLevel;
-var commande = [`tient tien ${message.author} et passer niveaux**${curLevel}**!`,`${message.author} vient de passer niveaux **${curLevel}**!`,`BRAVO tu passe au niveau **${curLevel}**! et la tu doit être happy non ?`];
+var commande = [`tient tien ${message.author} et passer niveaux**${curLevel}**!`,`${message.author} vient de passer niveaux **${curLevel}**!`,`BRAVO tu passe au niveau **${curLevel}**! et la tu doit Ãªtre happy non ?`];
 
 message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`);
 }
 if(message.content.startsWith(prefix + "level")) {
-message.reply(`tu est actuellement niveau ${userData.level}, avec ${userData.points} d'expérience(s).`);
+message.reply(`tu est actuellement niveau ${userData.level}, avec ${userData.points} d'expÃ©rience(s).`);
 }
 fs.writeFile('./points.json', JSON.stringify(points), (err) => {if(err) console.error(err)});
 });
@@ -268,23 +268,23 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "	-!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n -coucou @mention: pour dire un coucou a quelqu'un  \n yo @mention : idem  \n -salut @mention : idem \n -!ping : la commande la plus connu pour rien\n -!avatar 1 à 18 : pour changer l'avatar au bot\n -!jeux (votre phrase) : pour modifier le jeux tu bot")
-.addField("Commande musique de Splatbotoont", "-!musique de 1 à 46: connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n -!woomy : pareil que sur !musique sauf que c'est une musique débile \n -!voiceboy/voicegirl pour entendre toute les voix enrengistrer splatoon 1 bientôt de splatoon 2")
-.setFooter("© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids.")
+.addField("Commande de Splatbotoon", "	-!level : votre niveaux (a dÃ©couvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n -coucou @mention: pour dire un coucou a quelqu'un  \n yo @mention : idem  \n -salut @mention : idem \n -!ping : la commande la plus connu pour rien\n -!avatar 1 Ã  18 : pour changer l'avatar au bot\n -!jeux (votre phrase) : pour modifier le jeux tu bot")
+.addField("Commande musique de Splatbotoont", "-!musique de 1 Ã  46: connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n -!woomy : pareil que sur !musique sauf que c'est une musique dÃ©bile \n -!voiceboy/voicegirl pour entendre toute les voix enrengistrer splatoon 1 bientÃ´t de splatoon 2")
+.setFooter("Â© Splatbotoont est tous droits rÃ©servÃ©s et CrÃ©Ã© par Ps Liquidateur de Kids.")
 message.channel.sendMessage(help_embed)
 
 })
 
 bot.on('message', message => {
    if (message.content.startsWith(`swignin `)) {
-var commande = ["Ouai .","Après ?","Pfff, sa dévient ennuyant ton histiore.","Tu veut manger un morceaux ?","ET , je suis un bot pas un docteur !","Oh non , j'adore t'emmerdé , reste encore un peu :tired_face: !","Tagoule tu me soule !!!","A ton avis :thinking: , c'est moi ou c'est Evilsquid qui est le plus fort a splatoon 2 ?","Ba pour la penne je fait la guelle ","","","","","",""];
+var commande = ["Ouai .","AprÃ¨s ?","Pfff, sa dÃ©vient ennuyant ton histiore.","Tu veut manger un morceaux ?","ET , je suis un bot pas un docteur !","Oh non , j'adore t'emmerdÃ© , reste encore un peu :tired_face: !","Tagoule tu me soule !!!","A ton avis :thinking: , c'est moi ou c'est Evilsquid qui est le plus fort a splatoon 2 ?","Ba pour la penne je fait la guelle ","","","","","",""];
 message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
 }
 })
 
 bot.on('message', message => {
    if (message.content.startsWith(`gravegeezuegu rh jf`)) {
-var commande = ["Ouai .","Après ?","Pfff, sa dévient ennuyant ton histiore.","Tu veut manger un morceaux ?","ET , je suis un bot pas un docteur !","Oh non , j'adore t'emmerdé , reste encore un peu :tired_face: !","Tagoule tu me soule !!!","A ton avis :thinking: , c'est moi ou c'est Evilsquid qui est le plus fort a splatoon 2 ?","Ba pour la penne je fait la guelle ","","","","","",""];
+var commande = ["Ouai .","AprÃ¨s ?","Pfff, sa dÃ©vient ennuyant ton histiore.","Tu veut manger un morceaux ?","ET , je suis un bot pas un docteur !","Oh non , j'adore t'emmerdÃ© , reste encore un peu :tired_face: !","Tagoule tu me soule !!!","A ton avis :thinking: , c'est moi ou c'est Evilsquid qui est le plus fort a splatoon 2 ?","Ba pour la penne je fait la guelle ","","","","","",""];
 message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
 }
 })
@@ -348,7 +348,7 @@ var mentionsbot = [ ,"<@159985870458322944>",
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`coucou ${mentionsbot[i]}`)) {
-            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te répondre ^^`)
+            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te rÃ©pondre ^^`)
         }
     }
 })
@@ -356,7 +356,7 @@ bot.on('message', message => {
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`salut ${mentionsbot[i]}`)) {
-            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te répondre ^^`)
+            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te rÃ©pondre ^^`)
         }
     }
 })
@@ -364,7 +364,7 @@ bot.on('message', message => {
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`yo ${mentionsbot[i]}`)) {
-            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te répondre ^^`)
+            message.channel.send(`Est ${message.author} ${mentionsbot[i]} est qu'un bot il pourra pas te rÃ©pondre ^^`)
         }
     }
 })
@@ -404,7 +404,7 @@ var mentionsdessins = [ ,"<@366476049648975873>",
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`coucou ${mentionsdessins[i]}`)) {
-            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentré sur son dessins. Mais coucou quand même ${mentionsdessins[i]}`)
+            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentrÃ© sur son dessins. Mais coucou quand mÃªme ${mentionsdessins[i]}`)
         }
     }
 })
@@ -412,7 +412,7 @@ bot.on('message', message => {
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`salut ${mentionsdessins[i]}`)) {
-            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentré sur son dessins. Mais salut quand même ${mentionsdessins[i]}`)
+            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentrÃ© sur son dessins. Mais salut quand mÃªme ${mentionsdessins[i]}`)
         }
     }
 })
@@ -420,7 +420,7 @@ bot.on('message', message => {
 bot.on('message', message => {
     for(var i = 0; i < mentionsbot.length; i++){
         if (message.content.startsWith(`yo ${mentionsdessins[i]}`)) {
-            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentré sur son dessins. Mais salut quand même ${mentionsdessins[i]}`)
+            message.channel.send(`Chuuut ${message.author} , ${mentionsdessins[i]} est en train de se concentrÃ© sur son dessins. Mais salut quand mÃªme ${mentionsdessins[i]}`)
         }
     }
 })
@@ -452,10 +452,10 @@ bot.on("message", message => {
 
 if (message.content === "!3dsthemes") {
 
-message.channel.sendMessage(`Hey salut tout le monde donc voila juste pour dire qu'est-ce que vous en penser de la création de ${message.author} ?`)
+message.channel.sendMessage(`Hey salut tout le monde donc voila juste pour dire qu'est-ce que vous en penser de la crÃ©ation de ${message.author} ?`)
 
 message.channel.sendMessage(`voici la photo`)
-message.channel.sendMessage("Bien sûr vous ne pouvez pas parler.Mais c'est normal parler avec des réaction")
+message.channel.sendMessage("Bien sÃ»r vous ne pouvez pas parler.Mais c'est normal parler avec des rÃ©action")
 message.channel.sendMessage('En tout cas merci ^_^')
 
 
@@ -488,7 +488,7 @@ voiceChannel
 .join()
 .then(function (connection) {
 
-  message.channel.sendMessage(`La musique woomy est lancée`)
+  message.channel.sendMessage(`La musique woomy est lancÃ©e`)
   connection.playFile('./music.mp3');
 
 
@@ -506,7 +506,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./Splatoon-Inkling Boy SFX.mp3')
-    message.channel.sendMessage(`La musique voice boy est lancée`)
+    message.channel.sendMessage(`La musique voice boy est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -520,7 +520,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./Splatoon-Inkling Girl SFX.mp3')
-    message.channel.sendMessage(`La musique voice girl est lancée`)
+    message.channel.sendMessage(`La musique voice girl est lancÃ©e`)
 })}})
 
 
@@ -536,7 +536,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 1.mp3')
-    message.channel.sendMessage(`La musique 1 est lancée`)
+    message.channel.sendMessage(`La musique 1 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -551,7 +551,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 2.mp3')
-    message.channel.sendMessage(`La musique 2 est lancée`)
+    message.channel.sendMessage(`La musique 2 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -566,7 +566,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 3.mp3')
-    message.channel.sendMessage(`La musique 3 est lancée`)
+    message.channel.sendMessage(`La musique 3 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -581,7 +581,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 4.mp3')
-    message.channel.sendMessage(`La musique 4 est lancée`)
+    message.channel.sendMessage(`La musique 4 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -596,7 +596,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 5.mp3')
-   message.channel.sendMessage(`La musique 5 est lancée`)
+   message.channel.sendMessage(`La musique 5 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -611,7 +611,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 6.mp3')
-  message.channel.sendMessage(`La musique 6 est lancée`)
+  message.channel.sendMessage(`La musique 6 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -626,7 +626,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 7.mp3')
-    message.channel.sendMessage(`La musique 7 est lancée`)
+    message.channel.sendMessage(`La musique 7 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -641,7 +641,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 8.mp3')
-    message.channel.sendMessage(`La musique 8 est lancée`)
+    message.channel.sendMessage(`La musique 8 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -656,7 +656,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 9.mp3')
-    message.channel.sendMessage(`La musique 9 est lancée`)
+    message.channel.sendMessage(`La musique 9 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -671,7 +671,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 10.mp3')
-   message.channel.sendMessage(`La musique 10 est lancée`)
+   message.channel.sendMessage(`La musique 10 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -686,7 +686,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 11.mp3')
-    message.channel.sendMessage(`La musique 11 est lancée`)
+    message.channel.sendMessage(`La musique 11 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -701,7 +701,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 12.mp3')
-    message.channel.sendMessage(`La musique 12 est lancée`)
+    message.channel.sendMessage(`La musique 12 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -716,7 +716,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 13.mp3')
-    message.channel.sendMessage(`La musique 13 est lancée`)
+    message.channel.sendMessage(`La musique 13 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -731,7 +731,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 14.mp3')
-    message.channel.sendMessage(`La musique 14 est lancée`)
+    message.channel.sendMessage(`La musique 14 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -748,7 +748,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 15.mp3')
-    message.channel.sendMessage(`La musique 15 est lancée`)
+    message.channel.sendMessage(`La musique 15 est lancÃ©e`)
 })}})
 
 
@@ -764,7 +764,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 16.wav')
-    message.channel.sendMessage(`La musique 16 est lancée`)
+    message.channel.sendMessage(`La musique 16 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -780,7 +780,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 17.mp3')
-    message.channel.sendMessage(`La musique 17 est lancée`)
+    message.channel.sendMessage(`La musique 17 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -794,7 +794,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 18.mp3')
-    message.channel.sendMessage(`La musique 18 est lancée`)
+    message.channel.sendMessage(`La musique 18 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -808,7 +808,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 19.mp3')
-    message.channel.sendMessage(`La musique 19 est lancée`)
+    message.channel.sendMessage(`La musique 19 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -822,7 +822,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 20.mp3')
-    message.channel.sendMessage(`La musique 20 est lancée`)
+    message.channel.sendMessage(`La musique 20 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -836,7 +836,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 21.mp3')
-    message.channel.sendMessage(`La musique 21 est lancée`)
+    message.channel.sendMessage(`La musique 21 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -850,7 +850,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 22.mp3')
-    message.channel.sendMessage(`La musique 22 est lancée`)
+    message.channel.sendMessage(`La musique 22 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -864,7 +864,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 23.mp3')
-    message.channel.sendMessage(`La musique 23 est lancée`)
+    message.channel.sendMessage(`La musique 23 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -878,7 +878,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 24.mp3')
-    message.channel.sendMessage(`La musique 24 est lancée`)
+    message.channel.sendMessage(`La musique 24 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -892,7 +892,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 25.mp3')
-    message.channel.sendMessage(`La musique 25 est lancée`)
+    message.channel.sendMessage(`La musique 25 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -906,7 +906,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 26.mp3')
-    message.channel.sendMessage(`La musique 26 est lancée`)
+    message.channel.sendMessage(`La musique 26 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -920,7 +920,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 27.mp3')
-    message.channel.sendMessage(`La musique 27 est lancée`)
+    message.channel.sendMessage(`La musique 27 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -934,7 +934,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 28.mp3')
-    message.channel.sendMessage(`La musique 28 est lancée`)
+    message.channel.sendMessage(`La musique 28 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -948,7 +948,7 @@ voiceChannel
 .join(378851818626613248)
 .then(function (connection) {
   connection.playFile('./musique 29.mp3')
-    message.channel.sendMessage(`La musique 29 est lancée`)
+    message.channel.sendMessage(`La musique 29 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -962,7 +962,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 30.mp3')
-    message.channel.sendMessage(`La musique 30 est lancée`)
+    message.channel.sendMessage(`La musique 30 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -977,7 +977,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 31.mp3')
-    message.channel.sendMessage(`La musique 31 est lancée`)
+    message.channel.sendMessage(`La musique 31 est lancÃ©e`)
 })}})
 bot.on("message", message => {
 
@@ -992,7 +992,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 32.mp3')
-    message.channel.sendMessage(`La musique 32 est lancée`)
+    message.channel.sendMessage(`La musique 32 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1007,7 +1007,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 33.mp3')
-    message.channel.sendMessage(`La musique 33 est lancée`)
+    message.channel.sendMessage(`La musique 33 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1022,7 +1022,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 34.mp3')
-    message.channel.sendMessage(`La musique 34 est lancée`)
+    message.channel.sendMessage(`La musique 34 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1037,7 +1037,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 35.mp3')
-    message.channel.sendMessage(`La musique 35 est lancée`)
+    message.channel.sendMessage(`La musique 35 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1052,7 +1052,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 36.mp3')
-    message.channel.sendMessage(`La musique 36 est lancée`)
+    message.channel.sendMessage(`La musique 36 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1067,7 +1067,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 37.mp3')
-    message.channel.sendMessage(`La musique 37 est lancée`)
+    message.channel.sendMessage(`La musique 37 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1082,7 +1082,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 38.mp3')
-    message.channel.sendMessage(`La musique 38 est lancée`)
+    message.channel.sendMessage(`La musique 38 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1097,7 +1097,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 39.mp3')
-    message.channel.sendMessage(`La musique 39 est lancée`)
+    message.channel.sendMessage(`La musique 39 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1112,7 +1112,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 40.mp3')
-    message.channel.sendMessage(`La musique 40 est lancée`)
+    message.channel.sendMessage(`La musique 40 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1127,7 +1127,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 41.mp3')
-    message.channel.sendMessage(`La musique 41 est lancée`)
+    message.channel.sendMessage(`La musique 41 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1142,7 +1142,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 42.mp3')
-    message.channel.sendMessage(`La musique 42 est lancée`)
+    message.channel.sendMessage(`La musique 42 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1157,7 +1157,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 43.mp3')
-    message.channel.sendMessage(`La musique 43 est lancée`)
+    message.channel.sendMessage(`La musique 43 est lancÃ©e`)
 })}})
 
 bot.on("message", message => {
@@ -1172,7 +1172,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 44.mp3')
-    message.channel.sendMessage(`La musique 44 est lancée`)
+    message.channel.sendMessage(`La musique 44 est lancÃ©e`)
 })}})
 
 
@@ -1188,7 +1188,7 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 45.mp3')
-    message.channel.sendMessage(`La musique 45 est lancée`)
+    message.channel.sendMessage(`La musique 45 est lancÃ©e`)
 })}})
 
 
@@ -1204,6 +1204,6 @@ voiceChannel
 .join()
 .then(function (connection) {
   connection.playFile('./musique 46.mp3')
-    message.channel.sendMessage(`La musique 46 est lancée`)
+    message.channel.sendMessage(`La musique 46 est lancÃ©e`)
 })}})
 bot.login(process.env.TOKEN)
