@@ -1206,4 +1206,4 @@ voiceChannel
   connection.playFile('./musique 46.mp3')
     message.channel.sendMessage(`La musique 46 est lancée`)
 })}})
-bot.login('Mzk1ODk2NzY3MTQyNjkwODE3.DTDn-g.HvniDWiS4mivHSlYxYJcTiD0WQM')
+bot.login('process.env.TOKEN')
