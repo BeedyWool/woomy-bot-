@@ -88,7 +88,7 @@ var commande = [`woomy, je vais de changer d'avatar, patienter quelque minute ${
 })
 
 bot.on('message', message => {
-   if (message.content.startsWith('!avatar')) {
+   if (message.content.startsWith('!monavatar')) {
     
     message.channel.send(`${message.author.avatarURL}`)
 
@@ -268,7 +268,7 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "	-!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n -coucou @mention: pour dire un coucou a quelqu'un  \n yo @mention : idem  \n -salut @mention : idem \n -!ping : la commande la plus connu pour rien\n -!avatar 1 à 18 : pour changer l'avatar au bot\n -!jeux (votre phrase) : pour modifier le jeux tu bot")
+.addField("Commande de Splatbotoon", "	-!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n -coucou @mention: pour dire un coucou a quelqu'un  \n yo @mention : idem  \n -salut @mention : idem \n -!ping : la commande la plus connu pour rien\n -!avatar 1 à 18 : pour changer l'avatar au bot\n -!jeux (votre phrase) : pour modifier le jeux tu bot\n -!monavatar pour voir son avatar en plus gros")
 .addField("Commande musique de Splatbotoont", "-!musique de 1 à 46: connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n -!woomy : pareil que sur !musique sauf que c'est une musique débile \n -!voiceboy/voicegirl pour entendre toute les voix enrengistrer splatoon 1 bientôt de splatoon 2")
 .setFooter("© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids.")
 message.channel.sendMessage(help_embed)
