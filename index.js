@@ -12,7 +12,7 @@ const ffmpeg = require ('ffmpeg')
 con = console.log,
 
 bot.on("ready", function () {
-  ot.user.setGame(`ne pas avoir l'angine de PS liquidateur de kids|!commande`) 
+bot.user.setGame(`ne pas avoir l'angine de PS liquidateur de kids|!commande`) 
 var commande = [`ne pas avoir l'angine de PS liquidateur de kids|!commande`,`Woooooomy|!commande`,`Splatoon sur wii U`,`faire une encyclopédie splatoon|!commande`];
 
 bot.user.setAvatar("./avata.jpg")
