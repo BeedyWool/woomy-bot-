@@ -1,21 +1,12 @@
 {
-  "name": "clarebot",
+  "name": "splatbotoont",
   "version": "0.0.1",
-  "description": "A discord bot for clare",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
-  "keywords": [
-    "clare",
-    "milf"
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku create --buildpack https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
-  ],
   "author": "JT",
   "license": "ISC",
   "dependencies": {
