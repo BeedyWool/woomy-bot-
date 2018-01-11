@@ -6,7 +6,7 @@
       "node": "7.10.1"
     },
     "scripts": {
-      "start": "node index.js --harmony-async-await"
+      "start": "node index.js"
     },
     "main": "index.js",
     "author": "",
