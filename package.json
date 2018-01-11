@@ -14,5 +14,4 @@
     "ffmpeg": "0.0.4"
   },
   "devDependencies": {}
-  "node-opus": "^0.2.7",
 }
