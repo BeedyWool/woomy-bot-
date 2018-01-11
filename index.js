@@ -16,7 +16,7 @@ bot.user.setGame(`ne pas avoir l'angine de PS liquidateur de kids|!commande`)
 var commande = [`ne pas avoir l'angine de PS liquidateur de kids|!commande`,`Woooooomy|!commande`,`Splatoon sur wii U`,`faire une encyclopédie splatoon|!commande`];
 
 bot.user.setAvatar("./avata.jpg")
-bot.user.setGame('jeu', 'https://www.twitch.tv/psliquidateurdekids')
+bot.user.setGame("J'adore les burgeur aux salmonoïdes hmm ;b|!commande", 'https://www.twitch.tv/psliquidateurdekids')
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
 
@@ -71,7 +71,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
    if (message.content.startsWith(`!jeux`)) {
-  bot.user.setGame(`${message}|!commande`)
+  bot.user.setGame(`${message}|!commande`, 'https://www.twitch.tv/psliquidateurdekids')
 var commande = [`woomy , je vais de changer de jeux, patienter quelque minute ${message.author}`,`squidy, ok changement de jeux, patienter quelque minute ${message.author}`,`nyges, je vais changer de jeux, patienter ${message.author}`];
      message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
  .catch(console.error);
