@@ -16,7 +16,7 @@ bot.on("ready", function () {
 var commande = [`ne pas avoir l'angine de PS liquidateur de kids|!commande`,`Woooooomy|!commande`,`Splatoon sur wii U`,`faire une encyclopédie splatoon|!commande`];
 
 bot.user.setAvatar("./avata.jpg")
-
+bot.user.setGame('jeu', 'compte twitch (https://www.twitch.tv/psliquidateurdekids)')
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
 
